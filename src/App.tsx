@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Forms from './components/Forms';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className='grid sm:grid-cols-[40%_60%] md:grid-cols-[50%_50%]'>
+        <div className="h-[200px] sm:h-screen grid items-center justify-center justify-items-center gap-2 content-center text-center bg-cover bg-no-repeat bg-center"
+          style={{ backgroundImage: `url(/assets/abstract2.png)` }}
         >
-          Learn React
-        </a>
-      </header>
+          <img src="./assets/form.png" alt="" className="w-[50px] sm:w-[100px]" />
+          <h1 className='text-2xl sm:text-4xl'>React Forms</h1>
+          <p className='hidden sm:block px-4'> This is made by using <b>React Hook Form</b> and <b>Zod</b> for validation </p>
+        </div>
+        <Forms />
+      </div>
+
+      {/* <div className='flex items-center justify-center h-screen'>
+        <div className='bg-base-100 shadow-xl w-[50%] '>
+          <Forms />
+        </div>
+      </div> */}
     </div>
   );
 }
